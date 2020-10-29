@@ -58,7 +58,16 @@ pipelines:
         execution:
           onExecute:
             - echo $step_env_var1
-
+      - name: step_5
+        type: Bash
+        configuration:
+          environmentVariables:
+            step_env_var1: "hello"
+          inputSteps:
+            - name: step_2
+        execution:
+          onExecute:
+            - echo $step_env_var1 
       - name: step_4
         type: Bash
         configuration:
