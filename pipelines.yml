@@ -76,7 +76,7 @@ pipelines:
         execution:
           onExecute:
             - echo $app_version
-      - name: step_5
+      - name: step_6
         type: Bash
         configuration:
           inputSteps:
